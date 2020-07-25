@@ -1,0 +1,148 @@
+*{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
+.index{
+	width: 20%;
+	height: 100%;
+	margin-top: 0;
+	margin-left: 0px;
+	background-color: black;
+	overflow: hidden;
+
+}
+.head{
+	height: 20vh;
+	width: 100%;
+	background-color:purple;
+}
+
+.he1{
+	color: white;
+	width: 60%;
+	font-size: 35px;
+  font-weight: bold;
+  padding-top:7%; 
+  text-align: center;
+  letter-spacing: 1px;
+  /*border:0.5px solid white;*/
+	/*height: 5vh;*/
+	/*width: 60%;
+	*/
+}
+.head input{
+	background: transparent;
+	border-radius: 10px;
+	width: 80%;
+	height: 3vh;
+	border:0.5px solid white;
+	margin-top: 5%;
+	padding-left: 7px;  
+}
+li button{
+	color: white;
+	padding: 8px;
+	font-size: 20px;
+	text-align: left;
+	background: none;
+	width: 100%;
+	border: none;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	outline:none;
+	display: block;
+    cursor: pointer;
+    padding-left: 20px;
+    border-left: 3px solid transparent;
+}
+li button:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+li.active button{
+  color: purple;
+  background: #1e1e1e;
+  border-left-color: purple;
+}
+button:hover{
+background: #1e1e1e;
+}
+ul{
+  position: static;
+  display: none;
+}
+.feat-show.show{
+  display: block;
+}
+
+button span{
+  /*position: absolute;
+  top: 50%;
+  right: 20px;*/
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+span{
+	/*padding-top: 5%;*/
+	margin-top: 5%;
+	float: right;
+}
+button span.rotate{
+  transform: translateY(-50%) rotate(-180deg);
+}
+li.active li button{
+  color: #e6e6e6;
+  background: #918d8d;
+  border-left-color: transparent;
+}
+
+ul li{
+  line-height: 42px;
+  border-top: none;
+}
+ul li button{
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 40px;
+}
+ul li button:hover{
+  color: rgb(100, 17, 148)!important;
+  background: #1e1e1e!important;
+}
+.feat-btn:hover ul li button{
+	display: block;
+}
+.buttonContainer{
+	margin-top: 20px;
+	/*margin-left: 35px;*/
+	width: 100%;
+	/*padding-left: 40px;*/
+	/*border: 1px solid white;*/
+}
+.content{
+	width: 80%;
+	float: right;
+}
+#cont{
+	width: 100%;
+}
+#cont h1{
+	font-size: 50px;
+	margin-top: 50px;
+}
+#cont p{
+	margin-top: 40px;
+}
+.content1{
+	display: none;
+}
+
+
+
+
+

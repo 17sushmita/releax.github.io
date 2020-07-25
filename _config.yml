@@ -1,8 +1,0 @@
----
-exclude: ['README.markdown']
-permalink: ':title'
-highlighter: pygments
-safe: false
-title: 'Carte'
-
-theme: jekyll-theme-cayman

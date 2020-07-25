@@ -1,18 +1,66 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Releax Os</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="learn.css">
 
-<nav id='sidebar'>
-	{% include nav.html %}
-</nav>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<section id='content'>
-{% for post in site.posts %}
-  <article class='{{ post.type }}'>
-    <a name='{{ post.url }}' href='#{{ post.url }}'><h2>{% if post.type %}<code><b>{{ post.type }}</b> {{ post.url_path }}</code> {% endif %}{{ post.title }}</h2></a>
-    <section class='body'>
-      {{ post.content }}
-    </section>
-  </article>
-{% endfor %}
-</section>
+</head>
+<body>
+ 	<div class="index">
+		<div class="head">
+			<center><div class="he1">Releax</div>
+			<input type="text" name="searchbar" placeholder="Search..."></center>
+		</div>
+		<div class="tabContainer">
+			<ol class="buttonContainer">
+				<li><button onclick="showPanel(0)" class="feat-btn">Index 1<span class="fas fa-caret-down first"></span></button>
+					<ul class="feat-show">
+						<li><button onclick="showPanel(4)">Sub Index 5</button></li>
+							<li><button onclick="showPanel(5)">Sub Index 6</button></li>
+						</ul>
+				</li>
+				<li><button onclick="showPanel(1)">Index 2</button></li>
+				<li><button onclick="showPanel(2)">Index 3</button></li>
+				<li><button onclick="showPanel(3)">Index 4</button></li>
+				
+			</ol>
+		</div>
+	
+	</div> 
+<div class="content">
+	<center>
+		<div class="content1" id="cont">
+		<h1>Content Heading 1</h1>
+		<p>Content1 Content1 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div>
+		<div class="content1" id="cont">
+		<h1>Content Heading 2</h1>
+		<p>Content2 Content2 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div>
+		<div class="content1" id="cont">
+		<h1>Content Heading 3</h1>
+		<p>Content3 Content3 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div>
+		<div class="content1" id="cont">
+		<h1>Content Heading 4</h1>
+		<p>Content4 Content4 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div>
+		<div class="content1" id="cont">
+		<h1>Content Heading 5</h1>
+		<p>Content5 Content5 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div>
+		<div class="content1" id="cont">
+		<h1>Content Heading 6</h1>
+		<p>Content6 Content6 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
+		</div> 	 
+ </center>
+  </div>
+<script src="learn.js"></script>
+
+</body>
+</html>

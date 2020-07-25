@@ -13,28 +13,41 @@ body{
 	height: 100%;
 	margin-top: 0;
 	margin-left: 0px;
-	background-color: black;
+	background-color: rgba(124, 99, 168, 0.973);
 	overflow: hidden;
 
 }
 .head{
-	height: 20vh;
+	height: 25vh;
+	padding-bottom: 15px;
+	padding-top: 0px;
+	padding-right: 15px;
 	width: 100%;
-	background-color:purple;
+	background-color:rgb(81, 49, 133);
 }
 
 .he1{
 	color: white;
-	width: 60%;
-	font-size: 35px;
-  font-weight: bold;
-  padding-top:7%; 
-  text-align: center;
-  letter-spacing: 1px;
-  /*border:0.5px solid white;*/
+	width: 80%;
+	text-align: left;
+	font-family: sans-serif;
+	/*font-size: 35px;*/
+  	font-weight: bold;
+	  padding-top:15%;
+  	/*text-align: right;*/
+  	letter-spacing: 1px;
+  	/*border:0.5px solid white;*/
+  	padding-bottom: 0%;
 	/*height: 5vh;*/
 	/*width: 60%;
 	*/
+}
+img{
+	width: 30%;
+	height: 8vh;
+	border-radius: 15px;
+	/*padding-top: 4%;*/
+	/*padding-bottom: 4%;*/
 }
 .head input{
 	background: transparent;
@@ -53,7 +66,7 @@ li button{
 	background: none;
 	width: 100%;
 	border: none;
-	border-top: 1px solid rgba(255,255,255,0.1);
+	border-top: 1px solid rgba(255,255,255,0.5);
 	outline:none;
 	display: block;
     cursor: pointer;
@@ -61,15 +74,15 @@ li button{
     border-left: 3px solid transparent;
 }
 li button:last-child{
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 li.active button{
-  color: purple;
-  background: #1e1e1e;
-  border-left-color: purple;
+  color: #ffffff;
+  background: #5d0586;
+  border-left-color: #ffffff;
 }
 button:hover{
-background: #1e1e1e;
+background: #6a3099;
 }
 ul{
   position: static;
@@ -97,7 +110,7 @@ button span.rotate{
 }
 li.active li button{
   color: #e6e6e6;
-  background: #918d8d;
+  background: #6a3099;
   border-left-color: transparent;
 }
 
@@ -106,13 +119,13 @@ ul li{
   border-top: none;
 }
 ul li button{
-  font-size: 17px;
-  color: #e6e6e6;
+  font-size: 20px;
+  color: white;
   padding-left: 40px;
 }
 ul li button:hover{
-  color: rgb(100, 17, 148)!important;
-  background: #1e1e1e!important;
+  color: #fffff!important;
+  background: rgb(81, 49, 133)!important;
 }
 .feat-btn:hover ul li button{
 	display: block;

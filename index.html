@@ -4,28 +4,41 @@
 	<title>Releax Os</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="releax_style_sheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
+	<link rel="stylesheet" type="text/css" href="releax_style_sheet.css">
+<link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 <body>
- 	<div class="index">
-		<div class="head" style="border-width: 25px;">
-			<center>
-			<div class="he1">
-			<img src="linux.png" align="left" style="padding-right: 5px;"/>
-			<p style="font-size: 35px; padding-bottom:0px;">Releax</p>
-			<p style="font-size: 15px; padding-bottom:0px;">OS that works</p>
-			</div>
-			<div></div>
-			<input type="text" name="searchbar" style="background-color: white;" placeholder="Search...">
-			</center>
+ 	<div id="index" class="index">
+    <div class="hamburger" onclick="toggleSidebar()">
+        <span class="first"></span>
+        <span class="middle"></span>
+        <span class="last"></span>
+    </div>
+		<div class="head" >
+            <img class="logo" src="linux.png">
+			<h1 >Releax</h1>
+			<span >OS that works</span>
+            <div style="position:relative;" class="input-icons">
+            <input style="padding: 10px; padding-right: 30px;" class="form-control " id="search"  name="searchbar"  type="text"   placeholder="Search..." ><span style="right: 0px; position: absolute; margin: 0; color: black; padding: 10px;" class="fa fa-search "></span>
+            
+             </div>
+            <!--
+                <div class="input-icons">   
+                <input class="input-field" id="search" type="text" name="searchbar"  placeholder="Search...">
+                <i class="fa fa-search icon"></i>
+            </div>-->
 		</div>
+            
 		<div class="tabContainer" style="overflow-y:auto;">
 			<ol class="buttonContainer">
-				<li><button onclick="showPanel(0)" class="feat-btn">Index 1<span class="fas fa-caret-down first"></span></button>
+				<li><button onclick="showPanel(0)" class="feat-btn">Index 1<span id="showpanel" class="fas fa-caret-down first"></span></button>
 					<ul class="feat-show">
 						<li><button onclick="showPanel(4)">Sub Index 5</button></li>
 							<li><button onclick="showPanel(5)">Sub Index 6</button></li>
@@ -39,7 +52,7 @@
 		</div>
 	
 	</div> 
-<div class="content">
+<div id="content" class="content">
 	<center>
 		<div class="content1" id="cont">
 		<h1>Content Heading 1</h1>

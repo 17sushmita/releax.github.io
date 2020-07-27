@@ -21,3 +21,9 @@ showPanel(0);
       $('li').click(function(){
         $(this).addClass("active").siblings().removeClass("active");
       });
+
+function toggleSidebar(){
+    document.getElementById('index').classList.toggle('active');
+    document.getElementById('content').classList.toggle('slide');
+
+}

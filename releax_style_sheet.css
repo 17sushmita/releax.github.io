@@ -16,7 +16,8 @@ body{
     background-color: #3c1361;
     padding: 10px;
     padding-left: 0;
-    left: -20%;
+    left: 0%;
+
     transition: all 500ms linear;
 
 }
@@ -29,38 +30,24 @@ body{
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto auto auto;
+    grid-row-gap: 5px;
 	/*background-color:rgb(81, 49, 133);*/
 }
-/*
-.he1{
-	color: white;
-	width: inherit;
-	text-align: left;
-	font-family: sans-serif;
-  	font-weight: bold;
-	  padding-top:15%;
-  	letter-spacing: 1px;
-  	padding-bottom: 0%;
 
-}*/
-img{
-	width: 30%;
-	max-width: 100%;
-	height: auto;
-	border-radius: 15px;
-	/*padding-top: 4%;*/
-	/*padding-bottom: 4%;*/
+.head h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: left;
 }
-
-h1{
-    text-align: center;
-}
-span{
-    text-align: center;
-    margin: 5px;
+.index span{
+    font-family: monospace;
+    text-align: left;
+    margin: 0;
 }
 
 .logo{
+    object-fit: contain ;
     grid-row-start: 1;
     grid-row-end: 3;
     width: 100%;
@@ -74,58 +61,38 @@ span{
 #search{
     width: 100%;
 }
-/*
-#search{
-	background: transparent;
-	width: 80%;
-    height: 30px;
-    border-radius: 3px;
-	border:0.5px solid white;
-	margin-top: 5%;
-	padding-left: 7px;  
-}*/
 
-          
-        .icon { 
-            padding: 10px; 
-            color: gray; 
-            min-width: 50px; 
-            text-align: center;
-            padding-left: 0px;
-        } 
-          
-        .input-field { 
-            width: 100%; 
-            padding: 10px; 
-            padding-right: 20px;
-            text-align: left; 
-            margin-right: 0px;
-            padding-right: 0px
-        }
 li button{
 	color: white;
-	padding: 8px;
+    padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 20px;
 	text-align: left;
 	background: none;
 	width: 100%;
 	border: none;
-	border-top: 1px solid rgba(255,255,255,0.5);
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    /*
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);*/
 	outline:none;
 	display: block;
     cursor: pointer;
-    padding-left: 20px;
     border-left: 3px solid transparent;
+
 }
 li.active button{
   color: #ffffff;
   background: #5d0586;
+  font-size: x-large;
+  text-align: center;    
   border-left-color: #bca0dc;
 }
 button:hover{
 /*background: #6a3099;*/
-    background: #52307c;
+text-align: center;    
+background: #52307c;
+    transition: all 500ms linear;
+
 }
 ul{
   position: static;
@@ -184,6 +151,7 @@ ul li button:hover{
     width: 100%;
     padding: 20px;
     transition: all 500ms linear;
+    margin-left: 20%;
 }
 #cont{
 	width: 100%;
@@ -198,15 +166,29 @@ ul li button:hover{
 .content1{
 	display: none;
 }
-
+/*
 .hamburger{
     display: block;
     flex-direction: column;
     position: absolute;
-    left: 120%;
+    left: 105%;
     top:20px;
     height: 22px;
     width: 22px;
+
+}
+*/
+
+
+.hamburger{
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 999;
+    left: 105%;
+    top:20px;
+    transition: all 0.3s;
+    cursor: pointer;
 
 }
 
@@ -216,27 +198,64 @@ ul li button:hover{
     width: 35px;
     background-color: black;
     transition: all 0.3s;
-    margin: 2px;
+}
+
+.index .hamburger .first{
+    transform: rotate(135deg);
+    margin-top: 8px;
+
+}
+.index .hamburger .last{
+    transform: rotate(-135deg);
+    margin-top: -9px;
+
+}
+.index .hamburger .middle{
+    opacity: 0;
+}
+
+.index .hamburger span{
+    display: block;
+    height: 4px;
+    width: 35px;
+    background-color: black;
+    transition: all 0.3s;
 }
 .index.active{
-    left: 0%;
+    left: -20%;
+
+}
+
+.index.active .hamburger span{
+    display: block;
+    height: 4px;
+    width: 35px;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+
+.index.active .hamburger .middle,
+.index.active .hamburger .last{
+    margin-top: 3px;
 }
 
 .index.active .hamburger .first{
-    transform: rotate(130deg);
+    transform: rotate(0deg);
+    margin-top: 0;
 
 }
 .index.active .hamburger .last{
-    transform: rotate(-130deg);
+    transform: rotate(0deg);
 
 }
 .index.active .hamburger .middle{
-    opacity: 0;
+    opacity: 1;
 }
 
 
 .content.slide{
-    margin-left: 20%;
+    margin-left: 0;
 }
 
 @media screen and (max-width: 850px) {
@@ -256,6 +275,7 @@ ul li button:hover{
 
         }
     .index.active{
+        left: 0;
         transform: translateY(var(--height));
     }
     .hamburger{
@@ -265,10 +285,65 @@ ul li button:hover{
         display: block;
         float: right;
     }
+    
+    .index .hamburger span{
+        display: block;
+        height: 4px;
+        width: 35px;
+        background-color: black;
+        transition: all 0.3s;
+    }
+    .index .hamburger .middle,
+.index .hamburger .last{
+    margin-top: 3px;
+}
+
+.index .hamburger .first{
+    transform: rotate(0deg);
+    margin-top: 0;
+
+}
+.index .hamburger .last{
+    transform: rotate(0deg);
+
+}
+.index .hamburger .middle{
+    opacity: 1;
+}
+
+    
+    .index.active .hamburger .first{
+        transform: rotate(135deg);
+        margin-top: 8px;
+    
+    }
+    
+    .index .hamburger .middle,
+    .index .hamburger .last{
+        margin-top: 3px;
+    }
+    
+    
+    .index.active .hamburger .last{
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    
+    }
+    .index.active .hamburger .middle{
+        opacity: 0;
+    }
+        
+    .content{
+        margin-left: 0;
+    }
     .content.slide{
     margin-left: 0%;
 
     }
 
 
+}
+.input-field{
+    padding: 8px; 
+    padding-right: 30px;
 }

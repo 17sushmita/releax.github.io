@@ -23,31 +23,26 @@
     </div>
 		<div class="head" >
             <img class="logo" src="linux.png">
-			<h1 >Releax</h1>
+			<h1 >releax</h1>
 			<span >OS that works</span>
             <div style="position:relative;" class="input-icons">
-            <input style="padding: 10px; padding-right: 30px;" class="form-control " id="search"  name="searchbar"  type="text"   placeholder="Search..." ><span style="right: 0px; position: absolute; margin: 0; color: black; padding: 10px;" class="fa fa-search "></span>
+            <input class="input-field" id="search"  name="searchbar"  type="text"   placeholder="Search..." ><span style="right: 0px; position: absolute; margin: 0; color: black; padding: 10px;" class="fa fa-search "></span>
             
              </div>
-            <!--
-                <div class="input-icons">   
-                <input class="input-field" id="search" type="text" name="searchbar"  placeholder="Search...">
-                <i class="fa fa-search icon"></i>
-            </div>-->
+            
 		</div>
             
 		<div class="tabContainer" style="overflow-y:auto;">
 			<ol class="buttonContainer">
-				<li><button onclick="showPanel(0)" class="feat-btn">Index 1<span id="showpanel" class="fas fa-caret-down first"></span></button>
+				<li><button onclick="showPanel(0,this)" class="feat-btn">Index 1<span id="showpanel" class="fas fa-caret-down first"></span></button>
 					<ul class="feat-show">
 						<li><button onclick="showPanel(4)">Sub Index 5</button></li>
 							<li><button onclick="showPanel(5)">Sub Index 6</button></li>
 						</ul>
 				</li>
-				<li><button onclick="showPanel(1)">Index 2</button></li>
-				<li><button onclick="showPanel(2)">Index 3</button></li>
-				<li><button onclick="showPanel(3)">Index 4</button></li>
-				
+				<li><button onclick="showPanel(1,this)">Index 2</button></li>
+				<li><button onclick="showPanel(2,this)">Index 3</button></li>
+				<li><button onclick="showPanel(3,this)">Index 4</button></li>
 			</ol>
 		</div>
 	
@@ -56,6 +51,7 @@
 	<center>
 		<div class="content1" id="cont">
 		<h1>Content Heading 1</h1>
+
 		<p>Content1 Content1 Content Content Content Content Content Content Content Content Content Content Content Content Content Content</p>
 		</div>
 		<div class="content1" id="cont">

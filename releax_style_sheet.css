@@ -13,75 +13,10 @@ body{
 	width: 20%;
 	height: 100%;
 	/*background-color: rgba(124, 99, 168, 0.973);*/
-    background-color: #3c1361;
     left: 0%;
 
     transition: all 500ms linear;
 
-}
-.head{
-    color: aliceblue;
-	padding: 20px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 5px;
-	/*background-color:rgb(81, 49, 133);*/
-}
-
-.head h1{
-    font-family: 'Nunito', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    text-align: left;
-}
-#tagline{
-    font-family: monospace;
-    text-align: left;
-    margin: 0;
-}
-
-.img-wrap{
-    grid-row-start: 1;
-    grid-row-end: 3;
-    text-align: right;
-    height: 100%;
-    width: 100%;
-    padding-right: 10px;
-    position: relative;
-    display: inline-block;
-    
-}
-/* .logo{
-    display: block;
-    min-height: 100%;
-    width: 100%;
-    position: absolute;
-} */
-/* .img-wrap{
-    grid-row-start: 1;
-    grid-row-end: 3;
-    width: 100%;
-  height: 100%;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 0;
-  text-align: right;
-  align-content: flex-end;
-  align-items: flex-end;
-  justify-content: right;
-
-} */
-.logo{
-    display: block;
-  position: absolute;
-  height: 100%;
-  width: auto;
-  right: 1%;
 }
 
 /*
@@ -94,18 +29,9 @@ body{
     right: 0;
     text-align: right;
 }*/
-.input-icons{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    width: 100%;
-}
-#search{
-    width: 100%;
-}
 
 .tabContainer{
     background-color: rgba(124, 99, 168, 0.973);
-    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 100%;
@@ -130,12 +56,12 @@ li button{
 li.active button{
   color: #ffffff;
   /* background: #5d0586; */
-  background-color: #3c1361;
+  background-color: #5d0586;
   border-left-color: #bca0dc;
 }
 button:hover{
 /*background: #6a3099;*/
-    background: #52307c;
+    background: #6a3099;
     transition: all 500ms linear;
 
 }
@@ -387,7 +313,45 @@ ul li button:hover{
 
 
 }
-.input-field{
-    padding: 8px; 
-    padding-right: 30px;
+
+.head{
+	padding-bottom: 15px;
+	padding-top: 0px;
+	padding-right: 15px;
+	width: 100%;
+	background-color:rgb(81, 49, 133);
+}
+
+.he1{
+	color: white;
+	width: 80%;
+	text-align: left;
+	font-family: sans-serif;
+	/*font-size: 35px;*/
+  	font-weight: bold;
+	  padding-top:15%;
+  	/*text-align: right;*/
+  	letter-spacing: 1px;
+  	/*border:0.5px solid white;*/
+  	padding-bottom: 0%;
+	/*height: 5vh;*/
+	/*width: 60%;
+	*/
+}
+img{
+	width: 30%;
+	max-width: 100%;
+	height: auto;
+	border-radius: 15px;
+	/*padding-top: 4%;*/
+	/*padding-bottom: 4%;*/
+}
+.head input{
+	background: transparent;
+	border-radius: 10px;
+	width: 80%;
+	height: 3vh;
+	border:0.5px solid white;
+	margin-top: 5%;
+	padding-left: 7px;  
 }
